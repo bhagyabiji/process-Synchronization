@@ -22,3 +22,11 @@ add/sub R, 1
 store counter, R
 
 If A and B interleave (A loads 5, B loads 5, A stores 6, B stores 4), the final value is 4 or 6 instead of the correct 5. Synchronization makes sure only one process manipulates shared data at a time.
+
+
+We have four types of solutions to the process synchronization problem −
+
+  1. Locks
+  2. Semaphores
+  3. Monitors
+  4. Interrupt Disable
