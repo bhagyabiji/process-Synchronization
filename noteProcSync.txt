@@ -1,0 +1,24 @@
+Process Synchronization
+-----------------------
+
+- the coordination and control of concurrent processes to ensure correct and predictable outcomes.
+
+purpose
+-------
+- to prevent race conditions, data inconsistencies, and resource conflicts that may arise when multiple processes access shared resources simultaneously.
+
+-Synchronization makes sure only one process updates shared data at a time.
+
+
+Why we need it ?
+---------------
+
+When several processes or threads share data (a variable, a file, a buffer), the final result can depend on the order in which they run. That is a race condition.
+
+Example: counter = 5. Process A does counter++ and process B does counter--. Each is really three machine steps:
+
+load  R, counter
+add/sub R, 1
+store counter, R
+
+If A and B interleave (A loads 5, B loads 5, A stores 6, B stores 4), the final value is 4 or 6 instead of the correct 5. Synchronization makes sure only one process manipulates shared data at a time.
