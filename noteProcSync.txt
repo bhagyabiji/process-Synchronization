@@ -30,3 +30,10 @@ We have four types of solutions to the process synchronization problem −
   2. Semaphores
   3. Monitors
   4. Interrupt Disable
+
+Critical Section
+----------------
+A critical section is a code segment where shared variables can be accessed. An atomic action is required in a critical section; only one process can execute in at a time, while all other processes must wait to enter their critical sections.
+
+
+
