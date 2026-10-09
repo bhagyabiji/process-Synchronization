@@ -35,5 +35,15 @@ Critical Section
 ----------------
 A critical section is a code segment where shared variables can be accessed. An atomic action is required in a critical section; only one process can execute in at a time, while all other processes must wait to enter their critical sections.
 
+The Critical Section Problem
+-----------------------------
+The critical section (CS) is the part of code that accesses shared data. Every process follows this structure:
+
+  do {
+      entry section      // ask permission
+          critical section
+      exit section       // release
+          remainder section
+  } while (true);
 
 
