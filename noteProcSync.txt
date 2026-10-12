@@ -49,6 +49,14 @@ The critical section (CS) is the part of code that accesses shared data. Every p
 
 Peterson Solution in Process Synchronization
 --------------------------------------------
-The idea behind Peterson's Algorithm is to use two shared variables to indicate the intention of each process to enter its critical section. The two variables are −
-  flag[i] − A boolean variable that indicates whether process i wants to enter its critical section.
-  turn − An integer variable that indicates whose turn it is to enter the critical section.
+The idea behind Peterson's Algorithm is to use two shared variables to indicate the intention of each process to enter its critical section. The two variables are :-
+  - flag[i] : A boolean variable that indicates whether process i wants to enter its critical section.
+  - turn : An integer variable that indicates whose turn it is to enter the critical section.
+
+Properties
+----------
+  - Mutual Exclusion : Only one process can be in its critical section at a time.
+
+  - Progress : If no process is in its critical section, and one or more processes want to enter their critical sections, then the selection of the next process to enter the critical section cannot be postponed indefinitely.
+
+  - Bounded Waiting : There exists a limit on the number of times other processes are allowed to enter their critical sections after a process has made a request to enter its critical section and before that request is granted.
