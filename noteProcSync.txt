@@ -60,3 +60,8 @@ Properties
   - Progress : If no process is in its critical section, and one or more processes want to enter their critical sections, then the selection of the next process to enter the critical section cannot be postponed indefinitely.
 
   - Bounded Waiting : There exists a limit on the number of times other processes are allowed to enter their critical sections after a process has made a request to enter its critical section and before that request is granted.
+
+
+DEADLOCK 
+--------
+In an operating system, deadlock is a state in which two or more processes are unable to proceed because each is waiting for a resource that the other holds, resulting in a cycle of dependencies. 
