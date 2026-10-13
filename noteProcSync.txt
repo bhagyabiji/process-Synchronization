@@ -81,3 +81,15 @@ Conditions for Deadlock
 
 4. Circular Wait 
 − A set of processes exist such that each process in the set is waiting for a resource that another process in the set holds, forming a cycle of dependencies. Example: Process A waits for Process 's resource, Process B waits for Process 's resource, and Process C waits for Process 's resource, forming a circular chain.
+
+How to Avoid Deadlocks?
+-----------------------
+To avoid deadlock, the operating system can take measures to prevent one or more of the four necessary conditions from occurring. This can be done in the following ways −
+
+Prevent Mutual Exclusion 
+− This is generally not feasible because many resources (like printers, files, or memory) must be used exclusively by one process at a time. However, for some resources (like read-only resources), multiple processes can access them simultaneously.
+
+Prevent Hold and Wait 
+− Require processes to request all resources they will need at once before starting execution. This is called the "all-or-nothing" approach. Another option is to require processes to release all the resources they currently hold before requesting new ones.
+
+Prevent No Preemption − Allow preemption of resources. If a process holding some resources is waiting for additional resources, the operating system can preempt the resources currently held by the process and assign them to other processes.
